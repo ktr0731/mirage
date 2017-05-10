@@ -7,3 +7,12 @@ services:
       - TZ=Asia/Tokyo
     ports:
       - "8080:8080"
+
+  web:
+    image: ktr0731/mirage-web
+    volumes:
+      - ".htpasswd:/etc/nginx/.htpasswd"
+    ports:
+      - "80:80"
+    links:
+      - server
