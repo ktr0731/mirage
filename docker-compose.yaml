@@ -1,0 +1,9 @@
+version: "2"
+services:
+  server:
+    image: ktr0731/mirage-server
+    env_file: .server.env
+    environment:
+      - TZ=Asia/Tokyo
+    ports:
+      - "8080:8080"
